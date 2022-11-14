@@ -12,7 +12,7 @@ class Mapper:
         for line in doc:
             if line[0] == '#':
                 continue  # ignorar linhas comentadas
-            words = re.findall(r'[0-9]+', line)  # apenas numeros dos nodos
+            words = re.findall(r'[0-9]+', line.lower())  # apenas numeros dos nodos
             for word in words:
                 self.H[word] = (self.H[word] + 1) if word in self.H else 1
 

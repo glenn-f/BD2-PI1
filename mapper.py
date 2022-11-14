@@ -9,7 +9,7 @@ class Mapper:
 
     def map(self, doc):
         for line in doc:
-            line = line.strip()  # remove espaços em branco no início e fim da linha
+            line = line.strip().lower()  # remove espaços em branco no início e fim da linha
             words = line.split()  # quebra linha em palavras
             for word in words:
                 # adicionar word ao Hash(H)

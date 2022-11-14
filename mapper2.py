@@ -10,7 +10,7 @@ class Mapper:
 
     def map(self, doc):
         for line in doc:
-            words = re.findall(r'[A-Za-z]+', line)
+            words = re.findall(r'[A-Za-z]+', line.lower())
             for word in words:
                 self.H[word] = (self.H[word] + 1) if word in self.H else 1
 
